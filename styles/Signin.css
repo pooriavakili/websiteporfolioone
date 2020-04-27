@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Sahel";
+  src: url("./assets/font/sahel-font-v1.0.0-alpha24/Sahel.ttf"), url("./assets/font/sahel-font-v1.0.0-alpha24/Sahel.woff") format("woff");
+  src: url("./assets/font/sahel-font-v1.0.0-alpha24/Sahel.eot"); }
+
+@font-face {
+  font-family: "Nastaliq";
+  src: url("./assets/font/IranNastaliq-Taktemp.com/IranNastaliq.ttf"); }
+
+body {
+  overflow-x: hidden; }
+
+.signIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+  .signIn .sigIn-style {
+    font-size: 20px;
+    font-family: Sahel; }
+  .signIn .email {
+    width: 200px;
+    height: 20px;
+    border-radius: 20px;
+    border: 1px solid #000; }
+  .signIn .password {
+    width: 200px;
+    height: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid #000; }
+  .signIn .main-btn {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px; }
+    .signIn .main-btn .button {
+      padding: 20px 50px;
+      background-color: #EB1501;
+      color: #fff;
+      transition: background-color .5s;
+      text-decoration: none;
+      cursor: pointer; }
+      .signIn .main-btn .button:hover {
+        background-color: #000; }
+
+.size {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: red; }

@@ -1,0 +1,38 @@
+$Color-Black:#05091f;
+$color-blue:#00a1ff;
+$purple-color:#EA6CFF;
+$colorBlack:#000;
+$colorWhite:#fff;
+$color-Grey:#808080;
+$color-Bluenavy:#191970;
+$colorPrimary:#B4DE2A;
+$colorBlue:#1B0CE0;
+$font-Sahel:Sahel;
+$font-nastaliq:Nastaliq;
+$colorRed:#EB1501;
+$color-gray:#2e2e5d;
+@mixin Size($width,$height){
+  width: $width;
+  height: $height;
+}
+@mixin SizeSvg($top,$left){
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+@font-face {
+  font-family: "Sahel";
+  src: url("./assets/font/sahel-font-v1.0.0-alpha24/Sahel.ttf"),
+  url("./assets/font/sahel-font-v1.0.0-alpha24/Sahel.woff") format("woff");
+;
+  src: url("./assets/font/sahel-font-v1.0.0-alpha24/Sahel.eot");
+}
+@font-face {
+  font-family: "Nastaliq";
+  src: url("./assets/font/IranNastaliq-Taktemp.com/IranNastaliq.ttf");
+}
+@mixin flexLayout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
