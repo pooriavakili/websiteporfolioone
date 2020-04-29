@@ -147,27 +147,48 @@ color: white;
 }
 
 .nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
   background-color: $colorBlack;
-  padding: 10px;
+
   &-item{
     list-style: none;
+
+
   }
+
   &-items{
-    display: inline-block;
-    margin: 20px;
+    color: rgb(226,226,226);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font:{
+      weight: bold;
+      size: 14px;
+    };
+   &:hover{
+     color: $colorRed;
+   }
   }
   &-links{
-    text-decoration: none;
-    color: $colorWhite;
-    transition: all .5s;
-    text-transform: uppercase;
-    &:hover{
-      color: $colorRed;
-      background-color: $colorBlack;
-      padding: 10px;
-    }
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
     @media (max-width: 800px) {
-      display: none;
+      position: absolute;
+      right: 0;
+      height: 92vh;
+      top: 8vh;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform .5s ease;
+      align-items: center;
+      background-color: $colorBlack;
+      transform: translateX(100%);
     }
   }
 
@@ -176,26 +197,20 @@ color: white;
   display: none;
   @media (max-width: 800px) {
     display: block;
-    @include Size(50px,50px);
-    background-color: transparent;
-    border: 0;
-    position: absolute;
-    top: 10px;
-    right:15px;
-
-    outline: 0;
+    position: relative;
+   left:430px;
+   top: -40px;
     cursor: pointer;
+  }
+}
+.menu div{
 
-    &-line{
-      display: none;
-      @media (max-width: 800px) {
-        border-radius: 20px;
-        background-color: #fff;
-        display: inline-block;
+  @media (max-width: 800px) {
+    display: block;
+ @include Size(25px,4px);
+  margin: 5px;
+ background-color: #fff;
 
-        @include Size(100%,4px);
-      }
-    }
   }
 }
 @keyframes moveInLeft {
@@ -432,4 +447,31 @@ cursor: pointer;
       @include Size(100px,100px)
     }
   }
+}
+body{
+  @media(max-width: 800px) {
+overflow-x: hidden;
+  }
+}
+.nav-active{
+  transform: translateX(5%);
+}
+@keyframes navTolist {
+  from{
+opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+opacity: 1;
+    transform: translateX(0);
+  }
+}
+.toggle .menu-line-1{
+transform: rotate(-45deg)translate(-5px,6px);
+}
+.toggle .menu-line-2{
+opacity: 0;
+}
+.toggle .menu-line-3{
+  transform: rotate(45deg)translate(-5px,-6px);
 }

@@ -157,30 +157,45 @@
   color: white; }
 
 .nav {
-  background-color: #000;
-  padding: 10px; }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #000; }
 
 .nav-item {
   list-style: none; }
 
 .nav-items {
-  display: inline-block;
-  margin: 20px; }
+  color: #e2e2e2;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px; }
+
+.nav-items:hover {
+  color: #EB1501; }
 
 .nav-links {
-  text-decoration: none;
-  color: #fff;
-  transition: all .5s;
-  text-transform: uppercase; }
-
-.nav-links:hover {
-  color: #EB1501;
-  background-color: #000;
-  padding: 10px; }
+  display: flex;
+  justify-content: space-around;
+  width: 40%; }
 
 @media (max-width: 800px) {
   .nav-links {
-    display: none; } }
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform .5s ease;
+    align-items: center;
+    background-color: #000;
+    transform: translateX(100%); } }
 
 .menu {
   display: none; }
@@ -188,25 +203,18 @@
 @media (max-width: 800px) {
   .menu {
     display: block;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border: 0;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    outline: 0;
-    cursor: pointer; }
-  .menu-line {
-    display: none; } }
+    position: relative;
+    left: 430px;
+    top: -40px;
+    cursor: pointer; } }
 
-@media (max-width: 800px) and (max-width: 800px) {
-  .menu-line {
-    border-radius: 20px;
-    background-color: #fff;
-    display: inline-block;
-    width: 100%;
-    height: 4px; } }
+@media (max-width: 800px) {
+  .menu div {
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 5px;
+    background-color: #fff; } }
 
 @keyframes moveInLeft {
   0% {
@@ -448,3 +456,27 @@
   .social-twitter {
     width: 100px;
     height: 100px; } }
+
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden; } }
+
+.nav-active {
+  transform: translateX(5%); }
+
+@keyframes navTolist {
+  from {
+    opacity: 0;
+    transform: translateX(50px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.toggle .menu-line-1 {
+  transform: rotate(-45deg) translate(-5px, 6px); }
+
+.toggle .menu-line-2 {
+  opacity: 0; }
+
+.toggle .menu-line-3 {
+  transform: rotate(45deg) translate(-5px, -6px); }
